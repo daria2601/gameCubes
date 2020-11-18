@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module">
+        import {init} from "./js/game.js";
+
+        init();
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row"><h1>Game Clean Cubes</h1></div>
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                <div class="col-6">
+                    <button id="startGame" class="btn btn-success">Start</button>
+                    <button id="stopGame" class="btn btn-danger d-none">Stop</button>
+                    <button id="newGame" class="btn btn-warning">New Game</button>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <h4 class="text-center">Points</h4>
+                            <p class="text-center" id="points">0</p>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="text-center">Time left</h4>
+                            <p class="text-center" id="time">01:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table id="playingField"></table>
+            </div>
+        </div>
+        <div class="col-3 allResultsBlock">
+            <h3 class="text-center">Results</h3>
+            <div id="results" class="row resultsShow">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="finish" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Finish!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="finishScore">Your score: <span></span></p>
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="col-form-label">Name:</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    required="required"
+                                    id="name"
+                                    pattern="[A-Za-z]{1,32}"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modalError" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ooops!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please continue game or start new game!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

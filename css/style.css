@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS";
+}
+td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+.yellow {
+    background-image: linear-gradient(120deg, #fff3cd, #fafb42 );
+}
+
+.green {
+    background-image: linear-gradient(120deg, #bcffb0, #5fc93b);
+}
+
+.blue {
+    background-image: linear-gradient(120deg, #84cbff, #2f32c9);
+}
+
+.red {
+    background-image: linear-gradient(120deg, #ffb899, #c92124);
+}
+
+.orange {
+    background-image: linear-gradient(120deg, #ffc3f7, #c41fc9);
+}
+
+body {
+    background-image: url("../image/white-abstract-background-in-3d-paper-style_23-2148403778.jpg");
+    background-size: cover;
+}
+h1 {
+    display: block;
+    width: 100vw;
+    margin: 10px;
+    text-shadow: #ececec 5px 5px;
+}
+.allResultsBlock {
+    border: solid black 1px;
+    box-shadow: #ececec 10px 10px 5px;
+}
+.resultsShow {
+    margin: 10px;
+}
+
+.resultsShow p {
+    display: block;
+    width: 100%;
+}
